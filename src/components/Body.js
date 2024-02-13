@@ -5,7 +5,6 @@ import MainComponents from "./MainComponents";
 const Body = () => {
   return (
     <div className="flex">
-      Body
       <Sidebar />
       <MainComponents />
     </div>

@@ -1,21 +1,29 @@
 import React from "react";
+import { toggleMenu } from "../utils/appSLice";
+import { useDispatch } from "react-redux";
 
 const Head = () => {
+  const dispatch = useDispatch();
+  const toggleMenuHandler = () => {
+    dispatch(toggleMenu());
+  };
+
   return (
-    <div className="grid grid-cols-3 items-center p-4 bg-gray-900 shadow-lg">
-      <div className="flex col-span-1 justify-start items-center">
+    <div className="grid grid-cols-3 items-center p-4 bg-gray-900 shadow-md">
+      <div className="flex items-center">
         <img
-          className="h-8 w-auto mr-4"
+          onClick={() => toggleMenuHandler()}
+          className="cursor-pointer h-8 w-auto mr-2 ml-4 mx-5"
           alt="menu"
           src="https://www.shutterstock.com/image-vector/hamburger-menu-icon-mobile-apps-260nw-360130484.jpg"
         />
         <img
-          className="h-8 w-auto mx-2"
+          className="h-10 w-auto mx-12 "
           alt="youtube-logo"
-          src="https://cdn-icons-png.flaticon.com/256/1384/1384060.png"
+          src="https://ongpng.com/wp-content/uploads/2023/04/3-13.png"
         />
       </div>
-      <div className="flex col-span- justify-center">
+      <div className="flex justify-center">
         <input
           className="px-4 py-2 w-full rounded-md bg-gray-800 text-white focus:outline-none"
           type="text"
@@ -25,7 +33,7 @@ const Head = () => {
           Search
         </button>
       </div>
-      <div className="flex col-span-1 justify-end">
+      <div className="flex justify-end">
         <img
           className="h-8 w-auto"
           alt="user-icon"

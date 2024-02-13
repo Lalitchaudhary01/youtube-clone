@@ -1,11 +1,11 @@
 import React from "react";
-import Button from "./Button";
+import ButtonList from "./ButtonList";
 import VideoContainer from "./VideoContainer";
 
 const MainComponents = () => {
   return (
     <div>
-      <Button />
+      <ButtonList />
       <VideoContainer />
     </div>
   );
