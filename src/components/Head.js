@@ -1,8 +1,23 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { toggleMenu } from "../utils/appSLice";
 import { useDispatch } from "react-redux";
+import { YOUTUBE_SEARCH_API } from "../utils/contants";
 
 const Head = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+
+  useEffect(() => {
+    const timer = setTimeout(() => getSearchSuggestions(), 200);
+    return () => {
+      clearTimeout(timer);
+    };
+  }, [searchQuery]);
+  const getSearchSuggestions = async () => {
+    console.log("API CALL -" + searchQuery);
+    const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
+    const json = await data.json();
+  };
+
   const dispatch = useDispatch();
   const toggleMenuHandler = () => {
     dispatch(toggleMenu());
@@ -23,16 +38,28 @@ const Head = () => {
           src="https://ongpng.com/wp-content/uploads/2023/04/3-13.png"
         />
       </div>
-      <div className="flex justify-center">
+      <div className="flex ">
         <input
           className="px-4 py-2 w-full rounded-md bg-gray-800 text-white focus:outline-none"
           type="text"
           placeholder="Search"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
         />
         <button className="ml-2 px-4 py-2 bg-red-600 rounded-md text-white">
           Search
         </button>
+        <div className="fixed bg-white my-10 shadow-lg">
+          <ul>
+            <li className="py-2 shadow-lg px-2">I phone</li>
+            <li>I phone</li>
+            <li>I phone</li>
+            <li>I phone</li>
+            <li>I phone</li>
+          </ul>
+        </div>
       </div>
+
       <div className="flex justify-end">
         <img
           className="h-8 w-auto"
