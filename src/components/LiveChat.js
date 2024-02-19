@@ -20,7 +20,7 @@ const LiveChat = () => {
           message: "hey!!",
         })
       );
-    }, 100);
+    }, 1000);
     return () => clearInterval(i);
   }, []);
 
@@ -37,7 +37,13 @@ const LiveChat = () => {
         className="w-full border border-black flex"
         onSubmit={(e) => {
           e.preventDefault();
-          console.log("on form submit", liveMessage);
+          dispatch(
+            addMessage({
+              name: "Lalit",
+              message: liveMessage,
+            })
+          );
+          setLiveMessage("");
         }}
       >
         <input
