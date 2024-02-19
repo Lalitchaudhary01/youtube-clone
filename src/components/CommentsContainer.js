@@ -2,38 +2,38 @@ import React from "react";
 
 const commentsData = [
   {
-    name: "Nikhil Gugwad",
+    name: "Lalit chaudhary",
     text: "lorem ipsum dolo sit amet, consectetur adip",
     replies: [],
   },
   {
-    name: "Nikhil Gugwad",
+    name: "Lalit chaudhary",
     text: "lorem ipsum dolo sit amet, consectetur adip",
     replies: [
       {
-        name: "Nikhil Gugwad",
+        name: "Lalit chaudhary",
         text: "lorem ipsum dolo sit amet, consectetur adip",
         replies: [],
       },
       {
-        name: "Nikhil Gugwad",
+        name: "Lalit chaudhary",
         text: "lorem ipsum dolo sit amet, consectetur adip",
         replies: [
           {
-            name: "Nikhil Gugwad",
+            name: "Lalit chaudhary",
             text: "lorem ipsum dolo sit amet, consectetur adip",
             replies: [
               {
-                name: "Nikhil Gugwad",
+                name: "Lalit chaudhary",
                 text: "lorem ipsum dolo sit amet, consectetur adip",
                 replies: [
                   {
-                    name: "Nikhil Gugwad",
+                    name: "Lalit chaudhary",
                     text: "lorem ipsum dolo sit amet, consectetur adip",
                     replies: [],
                   },
                   {
-                    name: "Nikhil Gugwad",
+                    name: "Lalit chaudhary",
                     text: "lorem ipsum dolo sit amet, consectetur adip",
                     replies: [
                       {
@@ -52,27 +52,27 @@ const commentsData = [
     ],
   },
   {
-    name: "Nikhil Gugwad",
+    name: "Lalit chaudhary",
     text: "lorem ipsum dolo sit amet, consectetur adip",
     replies: [],
   },
   {
-    name: "Nikhil Gugwad",
+    name: "Lalit chaudhary",
     text: "lorem ipsum dolo sit amet, consectetur adip",
     replies: [],
   },
   {
-    name: "Nikhil Gugwad",
+    name: "Lalit chaudhary",
     text: "lorem ipsum dolo sit amet, consectetur adip",
     replies: [],
   },
   {
-    name: "Nikhil Gugwad",
+    name: "Lalit chaudhary",
     text: "lorem ipsum dolo sit amet, consectetur adip",
     replies: [],
   },
   {
-    name: "Nikhil Gugwad",
+    name: "Lalit chaudhary",
     text: "lorem ipsum dolo sit amet, consectetur adip",
     replies: [],
   },
